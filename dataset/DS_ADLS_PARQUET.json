@@ -1,0 +1,32 @@
+{
+	"name": "DS_ADLS_PARQUET",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_CONNECTION",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TargetFileName": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "adls_dataset"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().TargetFileName",
+					"type": "Expression"
+				},
+				"folderPath": "ready_datasets",
+				"fileSystem": "j2dadlscontainer"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
