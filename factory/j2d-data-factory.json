@@ -1,0 +1,9 @@
+{
+	"name": "j2d-data-factory",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "16f7f801-ccbc-4277-9279-75782d0d111c",
+		"tenantId": "d348fd5c-f43b-45dc-bf88-d5a6b224faa5"
+	}
+}
